@@ -372,10 +372,10 @@ AF_Stepper::AF_Stepper(uint16_t steps, uint8_t num) {
     MC.latch_tx();
 
     // enable both H bridges
-    pinMode(11, OUTPUT);
-    pinMode(3, OUTPUT);
-    digitalWrite(11, HIGH);
-    digitalWrite(3, HIGH);
+    pinMode(MOTOR1_EN, OUTPUT);
+    pinMode(MOTOR2_EN, OUTPUT);
+    digitalWrite(MOTOR1_EN, HIGH);
+    digitalWrite(MOTOR2_EN, HIGH);
 
     // use PWM for microstepping support
     initPWM1(STEPPER1_PWM_RATE);
@@ -389,10 +389,10 @@ AF_Stepper::AF_Stepper(uint16_t steps, uint8_t num) {
     MC.latch_tx();
 
     // enable both H bridges
-    pinMode(5, OUTPUT);
-    pinMode(6, OUTPUT);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
+    pinMode(MOTOR3_EN, OUTPUT);
+    pinMode(MOTOR4_EN, OUTPUT);
+    digitalWrite(MOTOR3_EN, HIGH);
+    digitalWrite(MOTOR4_EN, HIGH);
 
     // use PWM for microstepping support
     // use PWM for microstepping support
